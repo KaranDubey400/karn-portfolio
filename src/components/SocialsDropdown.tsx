@@ -9,6 +9,15 @@ import {
 } from '@/components/ui/dropdown-menu';
 import { Github, Instagram, MessageCircle, Twitch, Twitter } from 'lucide-react';
 
+const BlueskyIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg" width={20} height={20} {...props}>
+    <g>
+      <path d="M16 21.5c-2.5 2.5-7.5 2.5-10 0s-2.5-7.5 0-10c2.5-2.5 7.5-2.5 10 0 2.5-2.5 7.5-2.5 10 0s2.5 7.5 0 10-7.5 2.5-10 0z" fill="#0077FF"/>
+      <circle cx="16" cy="16" r="3" fill="#fff"/>
+    </g>
+  </svg>
+);
+
 const SocialsDropdown = () => {
   const socials = [
     {
@@ -40,6 +49,12 @@ const SocialsDropdown = () => {
       username: 'null',
       icon: Twitch,
       url: '#'
+    },
+    {
+      name: 'Bluesky',
+      username: '@0karn.bsky.social',
+      icon: BlueskyIcon,
+      url: 'https://bsky.app/profile/0karn.bsky.social'
     }
   ];
 
