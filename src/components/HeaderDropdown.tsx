@@ -58,7 +58,7 @@ const HeaderDropdown = () => {
           </DropdownMenuItem>
           
           <Dialog open={open} onOpenChange={setOpen}>
-            <DropdownMenuItem onClick={() => setOpen(true)}>
+            <DropdownMenuItem onClick={e => { e.stopPropagation(); setOpen(true); }}>
               About Me
             </DropdownMenuItem>
             <DialogContent className="bg-transparent border-none shadow-none p-0 flex justify-center items-center">
